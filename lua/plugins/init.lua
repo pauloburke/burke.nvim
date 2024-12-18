@@ -66,5 +66,12 @@ return {
                 "<leader>e", ":Neotree<CR>", desc = "File Explorer"
             },
         }
-    }
+    },
+
+    {
+        "s1n7ax/nvim-terminal",
+        config = function()
+            vim.o.hidden = true
+        end,
+    },
 }
