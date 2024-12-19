@@ -1,4 +1,8 @@
-require("config.remap")
+
+-- Set leader
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
 require("config.lazy")
 require("config.python")
 require("config.after")
@@ -6,7 +10,7 @@ require("mason").setup()
 require("config.lsp")
 require("autoclose").setup()
 require("toggleterm").setup()
-
+require("config.keymap")
 
 -- Options
 

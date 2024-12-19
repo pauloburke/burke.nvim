@@ -9,6 +9,7 @@ return {
             vim.cmd([[colorscheme tokyonight]])
         end,
     },
+    "echasnovski/mini.icons",
     "m4xshen/autoclose.nvim",
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
