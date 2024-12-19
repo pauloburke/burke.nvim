@@ -9,11 +9,16 @@ return {
             vim.cmd([[colorscheme tokyonight]])
         end,
     },
-
+    "m4xshen/autoclose.nvim",
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
-
+    {
+        "folke/twilight.nvim",
+        opts = {
+            context = 20,
+        }
+    },
     {
         "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"
     },

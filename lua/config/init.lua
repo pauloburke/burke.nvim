@@ -4,6 +4,9 @@ require("config.python")
 require("config.after")
 require("mason").setup()
 require("config.lsp")
+require("autoclose").setup()
+require("toggleterm").setup()
+
 
 -- Options
 
