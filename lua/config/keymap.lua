@@ -27,4 +27,17 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n><C-w>k")
 wk.add({
 
     { "<leader>g", desc = "LazyGit", icon = { icon = "󰊢", color = "orange" } }
+}
+)
+
+-- Code runner mappings
+local coderunner = require("config.coderunner")
+wk.add({
+    { "<leader>r",  group = "Code Runner" },
+    { "<leader>rr", function() coderunner.run_in_last_terminal() end, desc = "Run Code" },
+    { "<leader>r1", function() coderunner.run_in_terminal(1) end,     desc = "Run Code in Terminal 1" },
+    { "<leader>r2", function() coderunner.run_in_terminal(2) end,     desc = "Run Code in Terminal 2" },
+    { "<leader>r3", function() coderunner.run_in_terminal(3) end,     desc = "Run Code in Terminal 3" },
+    { "<leader>r4", function() coderunner.run_in_terminal(4) end,     desc = "Run Code in Terminal 4" },
+    { "<leader>r5", function() coderunner.run_in_terminal(5) end,     desc = "Run Code in Terminal 5" },
 })

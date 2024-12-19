@@ -14,6 +14,7 @@ return {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
+    "github/copilot.vim",
     {
         "folke/twilight.nvim",
         opts = {
