@@ -21,6 +21,9 @@ function M.run_in_terminal(term_num)
         return
     end
 
+    -- Save the current buffer
+    vim.cmd("w")
+
     local command = get_run_command(filepath)
     if not command then
         return
@@ -38,6 +41,9 @@ function M.run_in_last_terminal()
         vim.notify("No file is currently focused.", vim.log.levels.ERROR)
         return
     end
+
+    -- Save the current buffer
+    vim.cmd("w")
 
     local command = get_run_command(filepath)
     if not command then

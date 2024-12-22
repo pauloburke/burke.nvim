@@ -16,6 +16,11 @@ return {
     "neovim/nvim-lspconfig",
     "github/copilot.vim",
     {
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.8',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+    {
         "folke/twilight.nvim",
         opts = {
             context = 20,
