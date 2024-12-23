@@ -6,7 +6,7 @@ vim.g.maplocalleader = "\\"
 require("config.lazy")
 require("config.python")
 require("config.keymap")
-require("lsp.lua")
+require("config.lsp")
 
 
 -- Options

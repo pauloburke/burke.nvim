@@ -48,3 +48,12 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find f
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+
+-- Quickfix mappings
+wk.add({
+    { "<leader>q",  group = "Quickfix" },
+    { "<leader>qo", ":copen<CR>",      desc = "Open quickfix list" },
+    { "<leader>qc", ":cclose<CR>",     desc = "Close quickfix list" },
+    { "<leader>qn", ":cnext<CR>",      desc = "Go to next quickfix item" },
+    { "<leader>qp", ":cprev<CR>",      desc = "Go to previous quickfix item" },
+})
