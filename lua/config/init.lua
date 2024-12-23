@@ -2,14 +2,12 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Load modules
 require("config.lazy")
 require("config.python")
-require("config.after")
-require("mason").setup()
-require("config.lsp")
-require("autoclose").setup()
-require("toggleterm").setup()
 require("config.keymap")
+require("lsp.lua")
+
 
 -- Options
 
