@@ -31,23 +31,25 @@ wk.add({
 )
 
 -- Code runner mappings
-local coderunner = require("config.coderunner")
 wk.add({
     { "<leader>r",  group = "Code Runner" },
-    { "<leader>rr", function() coderunner.run_in_last_terminal() end, desc = "Run Code" },
-    { "<leader>r1", function() coderunner.run_in_terminal(1) end,     desc = "Run Code in Terminal 1" },
-    { "<leader>r2", function() coderunner.run_in_terminal(2) end,     desc = "Run Code in Terminal 2" },
-    { "<leader>r3", function() coderunner.run_in_terminal(3) end,     desc = "Run Code in Terminal 3" },
-    { "<leader>r4", function() coderunner.run_in_terminal(4) end,     desc = "Run Code in Terminal 4" },
-    { "<leader>r5", function() coderunner.run_in_terminal(5) end,     desc = "Run Code in Terminal 5" },
+    { "<leader>rr", ":RunInTerminal<CR>",  desc = "Run Code" },
+    { "<leader>r1", ":1RunInTerminal<CR>", desc = "Run Code in Terminal 1" },
+    { "<leader>r2", ":2RunInTerminal<CR>", desc = "Run Code in Terminal 2" },
+    { "<leader>r3", ":3RunInTerminal<CR>", desc = "Run Code in Terminal 3" },
+    { "<leader>r4", ":4RunInTerminal<CR>", desc = "Run Code in Terminal 4" },
+    { "<leader>r5", ":5RunInTerminal<CR>", desc = "Run Code in Terminal 5" },
 })
 
 -- Telescope mappings
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+wk.add({
+    { "<leader>f",  group = "Telescope" },
+    { "<leader>ff", builtin.find_files, desc = "Find files" },
+    { "<leader>fg", builtin.live_grep,  desc = "Live grep" },
+    { "<leader>fb", builtin.buffers,    desc = "Buffers" },
+    { "<leader>fh", builtin.help_tags,  desc = "Help tags" },
+})
 
 -- Quickfix mappings
 wk.add({
