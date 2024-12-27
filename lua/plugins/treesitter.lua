@@ -1,8 +1,8 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    setup = function()
-        require 'nvim-treesitter.configs'.setup {
+    config = function()
+        require 'nvim-treesitter.configs'.setup({
             modules = {},
 
             -- A list of parser names, or "all" (the listed parsers MUST always be installed)
@@ -29,6 +29,6 @@ return {
                 -- Instead of true it can also be a list of languages
                 additional_vim_regex_highlighting = false,
             },
-        }
+        })
     end
 }
