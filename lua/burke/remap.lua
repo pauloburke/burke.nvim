@@ -70,3 +70,10 @@ wk.add({
 wk.add({
 	{ "<leader>u", vim.cmd.UndotreeToggle, desc = "Undotree Toggle" },
 })
+
+-- C development mappings
+wk.add({
+	{ "<leader>c", group = "C Lang" },
+	{ "<leader>cm", ":!make<CR>", desc = "make" },
+	{ "<leader>cc", ":wa<CR>:!make clean<CR>", desc = "make clean" },
+})
